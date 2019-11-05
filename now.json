@@ -14,8 +14,8 @@
         { "src": "/all-students", "dest": "/" },
         { "src": "/analytics", "dest": "/" },
         { "src": "/data-table", "dest": "/" },
-        { "src": "/edit-course", "dest": "/" }
-        { "src": "/edit-student", "dest": "/" }
+        { "src": "/edit-course", "dest": "/" },
+        { "src": "/edit-student", "dest": "/" },
         { "src": "/student-profile", "dest": "/" }
     ]
 }

@@ -109,13 +109,6 @@
                                 <li><a title="Data Table" href="data-table"><span class="mini-sub-pro">Thông tin đơn hàng</span></a></li>
                             </ul>
                         </li>
-                        <li id="removable">
-                            <a class="has-arrow" href="#" aria-expanded="false"></span> <span class="mini-click-non">Trạng thái</span></a>
-                            <ul class="submenu-angle page-mini-nb-dp" aria-expanded="false">
-                                <li><a title="Login" href="/login"><span class="mini-sub-pro">Đăng nhập</span></a></li>
-                                <li><a title="Register" href="/register"><span class="mini-sub-pro">Đăng ký</span></a></li>
-                            </ul>
-                        </li>
                     </ul>
                 </nav>
             </div>
@@ -147,22 +140,25 @@
                                                 </li>
                                                 <li class="nav-item"><a href="#" class="nav-link">Giới thiệu</a>
                                                 </li>
-                                                <li class="nav-item"><a href="#" class="nav-link">Dịch vụ</a>
+                                                {{#unless user}}
+                                                <li class="nav-item"><a href="register" class="nav-link">Đăng ký</a>
                                                 </li>
-                                                <li class="nav-item"><a href="#" class="nav-link">Hỗ trợ</a>
+                                                <li class="nav-item"><a href="login" class="nav-link">Đăng nhập</a>
                                                 </li>
+                                                {{/unless}}
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                                         <div class="header-right-info">
                                             <ul class="nav navbar-nav mai-top-nav header-right-menu">
+                                              {{#if user}}
                                                 <li class="nav-item">
                                                     <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-															<img src="img/product/pro4.jpg" alt="" />
-															<span class="admin-name">Prof.Anderson</span>
-															<i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
-														</a>
+															                        <img src="img/product/pro4.jpg" alt="" />
+															                        <span class="admin-name">{{user.name}}</span>
+															                        <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
+														                        </a>
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
                                                         <li><a href="#"><span class="edu-icon edu-home-admin author-log-ic"></span>Tài khoản</a>
                                                         </li>
@@ -173,7 +169,8 @@
                                                         <li><a href="/logout"><span class="edu-icon edu-locked author-log-ic"></span>Đăng xuất</a>
                                                         </li>
                                                     </ul>
-                                                </li>                                              
+                                                </li>
+                                              {{/if}}                                             
                                             </ul>
                                         </div>
                                     </div>
@@ -207,7 +204,7 @@
                                                 <li><a href="student-profile">Hồ sơ người dùng</a>
                                                 </li>
                                             </ul>
-										</li>
+										                    </li>
 										
                                         <li><a data-toggle="collapse" data-target="#democrou" href="#">Quản lí sản phẩm <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                             <ul id="democrou" class="collapse dropdown-header-top">
@@ -218,23 +215,14 @@
                                                 <li><a href="edit-course">Chỉnh sửa thông tin</a>
                                                 </li>
                                             </ul>
-										</li>
-            
+										                    </li>
+
                                         <li><a data-toggle="collapse" data-target="#Tablesmob" href="#">Quản lí đơn hàng<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                             <ul id="Tablesmob" class="collapse dropdown-header-top">
                                                 <li><a href="data-table">Thông tin đơn hàng</a>
                                                 </li>
                                             </ul>
-										</li>
-
-                                        <li><a data-toggle="collapse" data-target="#Pagemob" href="#">Trạng thái <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
-                                            <ul id="Pagemob" class="collapse dropdown-header-top">
-                                                <li><a href="login">Đăng nhập</a>
-                                                </li>
-                                                <li><a href="register">Đăng ký</a>
-                                                </li>
-                                            </ul>
-                                        </li>
+										                    </li>    
                                     </ul>
                                 </nav>
                             </div>
